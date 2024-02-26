@@ -1,0 +1,13 @@
+{
+     "Effect": "Allow",
+     "Action": [
+       {% for action in actions %}
+         "{{ action }}"{{ "," if not loop.last }}
+       {% endfor %}
+      ],
+  "Resource": [
+       {% for resource in resources %}
+         "arn:{{ partition }}:{{ service }}:{{ region }}:{{ account }}:{{ resource }}"{{ "," if not loop.last }}
+       {% endfor %}
+       ]
+}

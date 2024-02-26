@@ -1,0 +1,14 @@
+{
+     "Effect": "Allow",
+     "Action": [
+       {% for action in actions %}
+         "{{ action }}"{{ "," if not loop.last }}
+       {% endfor %}
+      ],
+  "Resource": [
+       {% for resource in resources %}
+         "arn:{{ partition }}:logs:{{ region }}:{{ account }}:log-group:{{ resource }}",
+         "arn:{{ partition }}:logs:{{ region }}:{{ account }}:log-group:{{ resource }}:*"{{ "," if not loop.last }}
+       {% endfor %}
+       ]
+}

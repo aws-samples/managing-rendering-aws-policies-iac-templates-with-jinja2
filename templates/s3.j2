@@ -1,0 +1,14 @@
+{
+     "Effect": "Allow",
+     "Action": [
+       {% for action in actions %}
+         "{{ action }}"{{ "," if not loop.last }}
+       {% endfor %}
+      ],
+  "Resource": [
+       {%- for bucket in bucket_list -%}
+         "arn:{{ partition }}:s3:::{{ bucket }}",
+         "arn:{{ partition }}:s3:::{{ bucket }}/*"{{ "," if not loop.last }}
+       {% endfor %}
+       ]
+}

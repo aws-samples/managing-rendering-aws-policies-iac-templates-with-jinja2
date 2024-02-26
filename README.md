@@ -1,6 +1,6 @@
 **Managing and rendering AWS policies and IaC templates with Jinja2 and Python**
 
-[SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) platforms cater to multiple tenants through separate and specific [AWS policies](https://docs.aws.amazon.com/robomaker/latest/dg/auth_access_what-are-policies.html) , [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) as per their end user's need. Infrastructure-as-code being a common part of cloud infrastructure, various [IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)(infrastructure As Code) tools such as [AWS CloudFormation](https://aws.amazon.com/cloudformation/)(CF) template or a third party tool like [Terraform](https://www.terraform.io/),  are used to provision cloud infrastructure. 
+[SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) platforms cater to multiple tenants through separate and specific [AWS policies](https://docs.aws.amazon.com/robomaker/latest/dg/auth_access_what-are-policies.html) , [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) as per end user's need. Infrastructure-as-code being a common part of cloud infrastructure, various [IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)(infrastructure As Code) tools such as [AWS CloudFormation](https://aws.amazon.com/cloudformation/)(CF) template or a third party tool like [Terraform](https://www.terraform.io/),  are used to provision cloud infrastructure. 
 
 These templates or policies mostly contains declarative, repetitive and changing methods of defining a set of AWS infrastructure or permissions. All of these resource based policies or templates may require frequent , repetitive and dynamic changes. 
 
@@ -52,7 +52,7 @@ The following packages should be installed and configured prior to deploying thi
 
 **Installation and execution steps**
 
-1. Python and other packages
+1. Python and other required packages
 - Install [Python 3.7 or later](https://docs.python.org/3/using/index.html)
 - Install [Jinja2](https://pypi.org/project/Jinja2/) template engine
 - Install AWS SDK for Python - [boto3](https://pypi.org/project/boto3/) (Optional)
